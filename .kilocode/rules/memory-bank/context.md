@@ -1,8 +1,8 @@
-# Active Context: Next.js Starter Template
+# Active Context: Muvy - Mototaxi App
 
 ## Current State
 
-**Template Status**: ✅ Ready for development
+**Project Status**: ✅ Full app demo built
 
 The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. It's ready for AI-assisted expansion to build any type of application.
 
@@ -14,23 +14,38 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] ESLint configuration
 - [x] Memory bank documentation
 - [x] Recipe system for common features
+- [x] Muvy mototaxi app - full mobile UI demo with 10 screens
 
 ## Current Structure
 
 | File/Directory | Purpose | Status |
 |----------------|---------|--------|
-| `src/app/page.tsx` | Home page | ✅ Ready |
-| `src/app/layout.tsx` | Root layout | ✅ Ready |
+| `src/app/page.tsx` | Renders MuvyApp | ✅ Ready |
+| `src/app/layout.tsx` | Root layout (Muvy metadata) | ✅ Ready |
 | `src/app/globals.css` | Global styles | ✅ Ready |
-| `.kilocode/` | AI context & recipes | ✅ Ready |
+| `src/components/MuvyApp.tsx` | Phone frame + screen router | ✅ Ready |
+| `src/components/MapView.tsx` | SVG fake map component | ✅ Ready |
+| `src/components/screens/SplashScreen.tsx` | Splash/intro screen | ✅ Ready |
+| `src/components/screens/LoginScreen.tsx` | Login (rider/driver toggle) | ✅ Ready |
+| `src/components/screens/RegisterScreen.tsx` | 3-step registration | ✅ Ready |
+| `src/components/screens/HomeScreen.tsx` | Rider home w/ map | ✅ Ready |
+| `src/components/screens/RequestRideScreen.tsx` | Destination + price offer | ✅ Ready |
+| `src/components/screens/NegotiateScreen.tsx` | InDrive-style negotiation | ✅ Ready |
+| `src/components/screens/DriverSearchScreen.tsx` | Connecting animation | ✅ Ready |
+| `src/components/screens/ActiveRideScreen.tsx` | Ride in progress + rating | ✅ Ready |
+| `src/components/screens/DriverHomeScreen.tsx` | Driver dashboard + earnings | ✅ Ready |
+| `src/components/screens/DriverOfferScreen.tsx` | Driver receives/counters offer | ✅ Ready |
 
 ## Current Focus
 
-The template is ready. Next steps depend on user requirements:
-
-1. What type of application to build
-2. What features are needed
-3. Design/branding preferences
+Muvy is a complete mobile app demo (rendered as a phone mockup in browser). Features include:
+- Splash screen auto-advancing to login
+- Login with passenger/driver toggle + Google/Facebook options
+- 3-step registration with role selection
+- Rider home with SVG map + quick destinations
+- Price negotiation system (like InDrive) - low fares from $2,000 COP
+- Driver dashboard with online/offline toggle + earnings
+- Full ride flow: request → negotiate → connect → active ride → rating
 
 ## Quick Start Guide
 
@@ -85,3 +100,4 @@ export async function GET() {
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
+| 2026-03-24 | Built Muvy mototaxi app - 10 screens, phone mockup, SVG map, price negotiation system |
