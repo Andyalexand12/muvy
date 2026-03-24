@@ -11,16 +11,16 @@ interface Props {
 export default function RequestRideScreen({ navigate }: Props) {
   const [origin, setOrigin] = useState("Mi ubicación actual");
   const [destination, setDestination] = useState("");
-  const [price, setPrice] = useState("4000");
+  const [price, setPrice] = useState("2.00");
 
-  const suggestedPrice = 4500;
-  const minPrice = 2000;
+  const suggestedPrice = 3.00;
+  const minPrice = 1.00;
 
   const recentPlaces = [
-    { icon: "🛒", name: "Éxito Centro", address: "Cra 10 #15-20", price: "3.500" },
-    { icon: "🏥", name: "Hospital Central", address: "Av. 30 #5-90", price: "5.000" },
-    { icon: "🎓", name: "Universidad", address: "Calle 50 #20-30", price: "4.000" },
-    { icon: "🏦", name: "Banco Bogotá", address: "Cra 7 #32-15", price: "2.500" },
+    { icon: "🛒", name: "Éxito Centro", address: "Av. 10 de Agosto", price: "2.00" },
+    { icon: "🏥", name: "Hospital Metropolitano", address: "Av. Mariana de Jesús", price: "3.00" },
+    { icon: "🎓", name: "Universidad Central", address: "Av. Venezuela", price: "2.50" },
+    { icon: "🏦", name: "Banco del Pichincha", address: "Av. Amazonas", price: "1.50" },
   ];
 
   return (
@@ -95,14 +95,14 @@ export default function RequestRideScreen({ navigate }: Props) {
             onChange={(e) => setPrice(e.target.value)}
             className="flex-1 text-2xl font-black text-orange-600 outline-none bg-transparent"
           />
-          <span className="text-orange-400 text-sm font-medium">COP</span>
+          <span className="text-orange-400 text-sm font-medium">USD</span>
         </div>
 
         {/* Price range */}
         <div className="flex items-center justify-between mt-2">
-          <span className="text-xs text-gray-400">Mínimo: ${minPrice.toLocaleString()}</span>
+          <span className="text-xs text-gray-400">Mínimo: ${minPrice.toFixed(2)}</span>
           <div className="flex gap-1">
-            {[2000, 3000, 4000, 5000].map((p) => (
+            {[1, 2, 3, 5].map((p) => (
               <button
                 key={p}
                 onClick={() => setPrice(String(p))}
@@ -112,7 +112,7 @@ export default function RequestRideScreen({ navigate }: Props) {
                     : "bg-gray-100 text-gray-500"
                 }`}
               >
-                ${(p / 1000).toFixed(0)}k
+                ${p}.00
               </button>
             ))}
           </div>

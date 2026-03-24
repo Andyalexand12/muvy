@@ -81,9 +81,9 @@ export default function HomeScreen({ navigate, userType }: Props) {
           <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">Frecuentes</p>
           <div className="flex flex-col gap-2">
             {[
-              { icon: "🏠", label: "Casa", sub: "Calle 45 #12-30", price: "$3.500" },
-              { icon: "💼", label: "Trabajo", sub: "Av. El Dorado #90", price: "$5.000" },
-              { icon: "🛒", label: "Mercado", sub: "Centro Comercial", price: "$2.500" },
+              { icon: "🏠", label: "Casa", sub: "Av. Amazonas y Av. 10 de Agosto", price: "$2.50" },
+              { icon: "💼", label: "Trabajo", sub: "Centro Financiero", price: "$3.00" },
+              { icon: "🛒", label: "Mercado", sub: "Mercado de San Roque", price: "$1.50" },
             ].map((dest) => (
               <button
                 key={dest.label}

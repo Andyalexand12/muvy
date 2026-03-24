@@ -131,7 +131,7 @@ export default function RegisterScreen({ navigate }: Props) {
               <div>
                 <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1 block">Teléfono</label>
                 <div className="flex items-center border-2 border-gray-200 rounded-2xl px-4 gap-2 focus-within:border-orange-400 transition-colors">
-                  <span className="text-gray-400 text-sm">🇨🇴 +57</span>
+                  <span className="text-gray-400 text-sm">🇪🇨 +593</span>
                   <input
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -206,7 +206,7 @@ export default function RegisterScreen({ navigate }: Props) {
                 "Sin comisiones abusivas",
                 "Negocia el precio de tu viaje",
                 "Conductores verificados",
-                "Tarifas desde $2.000 COP",
+                "Tarifas desde $1.00 USD",
               ].map((b) => (
                 <div key={b} className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
